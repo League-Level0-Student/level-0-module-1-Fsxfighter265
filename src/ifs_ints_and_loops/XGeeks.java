@@ -5,6 +5,8 @@ package ifs_ints_and_loops;
 
 
 
+import java.util.Random;
+
 import javax.swing.JOptionPane;
 
 /*
@@ -16,11 +18,15 @@ public class XGeeks {
 public static void main(String[] args) {
 
 		// 1. Save the superpower for each person in a variable.
-
+		String [] superpower = {"Invisiblity", "Super Flight", "Super Strength", "Super Smart"};
+		Random power = new Random();
+		int currentpower = power.nextInt(superpower.length);
+		System.out.println(currentpower);
 		// 2. Ask the user to enter a name. Store their answer in a variable.
-
-		// 3. Show the superpower in a pop-up, depending on the name entered. 
-
+		String Data;
+		Data = JOptionPane.showInputDialog("Enter a any Name.");
+		// 3. Show the superpower in a pop-up, depending on the name entered.
+		JOptionPane.showMessageDialog(null, "Your Power is: " + superpower[currentpower]);
 	}
 }
 
